@@ -1,0 +1,34 @@
+# data and model weights are never tracked -- see .github/workflows/ci.yml,
+# which fails the build if one of these slips in anyway.
+*.h5ad
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.npz
+*.tar.gz
+*.zip
+
+# The cache and the runs are never tracked -- but the checksum manifest that
+# describes what should be in the cache is the whole point of having one.
+data/*
+!data/checksums.json
+.cache/
+runs/
+results/predictions/
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# notebooks
+.ipynb_checkpoints/
+
+# os
+.DS_Store

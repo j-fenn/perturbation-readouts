@@ -1,0 +1,72 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below, and cite GEARS and the source datasets."
+title: "perturbation-readouts: how much of a reported improvement is the choice of readout?"
+abstract: >-
+  A reproduction of GEARS on three public CRISPR perturbation datasets alongside
+  a bipartite heterogeneous GNN, scoring both models with every readout this
+  literature reports, on identical predictions and identical splits.
+authors:
+  - family-names: Fenn
+    given-names: Jack
+version: 0.1.0
+date-released: "2026-08-24"
+license: MIT
+repository-code: "https://github.com/jackfenn/perturbation-readouts"
+keywords:
+  - CRISPR
+  - perturbation prediction
+  - graph neural network
+  - evaluation metrics
+references:
+  - type: article
+    title: "Predicting transcriptional outcomes of novel multigene perturbations with GEARS"
+    authors:
+      - family-names: Roohani
+        given-names: Yusuf
+      - family-names: Huang
+        given-names: Kexin
+      - family-names: Leskovec
+        given-names: Jure
+    journal: "Nature Biotechnology"
+    volume: 42
+    year: 2024
+    doi: 10.1038/s41587-023-01905-6
+  - type: article
+    title: "Exploring genetic interaction manifolds constructed from rich single-cell phenotypes"
+    authors:
+      - family-names: Norman
+        given-names: Thomas M.
+    journal: "Science"
+    volume: 365
+    year: 2019
+    doi: 10.1126/science.aax4438
+  - type: article
+    title: "A multiplexed single-cell CRISPR screening platform enables systematic dissection of the unfolded protein response"
+    authors:
+      - family-names: Adamson
+        given-names: Britt
+    journal: "Cell"
+    volume: 167
+    year: 2016
+    doi: 10.1016/j.cell.2016.11.048
+  - type: article
+    title: "Perturb-Seq: dissecting molecular circuits with scalable single-cell RNA profiling of pooled genetic screens"
+    authors:
+      - family-names: Dixit
+        given-names: Atray
+    journal: "Cell"
+    volume: 167
+    year: 2016
+    doi: 10.1016/j.cell.2016.11.038
+  - type: article
+    title: "Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines"
+    authors:
+      - family-names: Ahlmann-Eltze
+        given-names: Constantin
+      - family-names: Huber
+        given-names: Wolfgang
+      - family-names: Anders
+        given-names: Simon
+    journal: "Nature Methods"
+    year: 2025
+    doi: 10.1038/s41592-025-02772-6

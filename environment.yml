@@ -1,0 +1,25 @@
+# conda env create -f environment.yml && conda activate pertreadout && pip install -e .
+#
+# The two upper pins are not preferences: cell-gears 0.1.2 predates a pandas 3
+# removal and a scipy sparse-indexing change. See patches/README.md.
+name: pertreadout
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=1.24
+  - pandas>=2.0,<3
+  - scipy>=1.10,<1.15
+  - scikit-learn>=1.3
+  - matplotlib>=3.7
+  - pyyaml>=6.0
+  - tqdm>=4.65
+  - jupyter
+  - pytest>=7.4
+  - pip
+  - pip:
+      - torch>=2.4
+      - torch_geometric>=2.5
+      - cell-gears==0.1.2
+      - anndata>=0.10
+      - scanpy>=1.10

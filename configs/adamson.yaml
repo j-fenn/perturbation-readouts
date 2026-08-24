@@ -1,0 +1,31 @@
+# Adamson et al. 2016 -- single-gene perturbations only, so the held-out set
+# tests generalisation to unseen single perturbations, not to novel pairs.
+dataset: adamson
+seeds: [0, 1, 2, 3, 4]
+
+# GEARS' simulation split holds out perturbations whose genes were never seen in
+# training. `no_test` is also accepted, but note it ignores train_gene_set_size
+# and holds out a random 10% of perturbations with no unseen-gene guarantee.
+split: simulation
+train_gene_set_size: 0.75
+
+# Scale. These runs are CPU-bound on an 8-core laptop, so three knobs are turned
+# down from what a GPU run would use: cells per condition, epochs, and a cap on
+# optimiser steps per epoch. All three are stated in the README and carried in
+# results/tables/per_run_readouts.csv. GEARS' published setting is 20 epochs on
+# all cells; its StepLR halves the learning rate every epoch, so 6 epochs is a
+# truncation of the same schedule rather than a different one. Raise these on a
+# GPU (max_cells_per_condition: 512, epochs: 20, max_steps_per_epoch: null).
+max_cells_per_condition: 32
+batch_size: 16
+epochs: 6
+max_steps_per_epoch: 50
+
+lr: 0.001
+weight_decay: 0.0005
+hidden_size: 64
+decoder_hidden_size: 16
+bipartite_rank: 32
+
+de_k: 20
+run_identity_ablation: true
