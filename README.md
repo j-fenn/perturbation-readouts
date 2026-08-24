@@ -199,7 +199,12 @@ Pearson on absolute expression does not separate anything.
 metric reproduces the original observation — 0.189 for GEARS and 0.208 for the bipartite model with
 all genes included, far below the 0.5 a coin flip would give. Restricting to genes whose true delta
 is larger, it climbs monotonically to **0.774 and 0.798** at the 99th percentile. It climbed on all
-three datasets and both models, without exception.
+three datasets and both models, without exception -- but how far it climbs depends on the dataset.
+On Norman and Adamson every curve passes 0.5 comfortably (0.71-0.90 at the 99th percentile). On
+Dixit, where the differential-expression signal is weakest, the bipartite model reaches 0.675 while
+GEARS reaches 0.501 -- chance, not past it -- and GEARS' identity-graph variant peaks at 0.457 and
+never reaches chance at all. The mechanism below is what the climb demonstrates; the height of the
+climb is not uniform.
 
 The explanation is the second table above. **91-96% of (condition, gene) true deltas are within 1.96
 standard errors of zero**, and on Norman **69% are exactly zero** -- a gene with no detected
@@ -240,8 +245,9 @@ It shows that on identical predictions and identical splits, the choice between 
 MSEs moves the number by 10x to 41x, and that pairing them across models manufactures a 17x-35x
 "improvement" between models that are within 4-37% of each other. It shows that Pearson on absolute
 expression is nearly saturated by a predictor with no perturbation input. It shows that a
-direction-accuracy figure far below chance climbs past chance once genes without a measurable
-response are excluded.
+direction-accuracy figure far below chance climbs steeply once genes without a measurable response
+are excluded -- past chance on five of the six model-dataset pairs, and to chance on Dixit/GEARS,
+where that signal is weakest.
 
 It does not show which model is better. At this training budget, with these confidence intervals, the
 two models are not separated on two of the three datasets.
