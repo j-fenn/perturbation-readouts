@@ -7,9 +7,9 @@ reported improvement is the choice of readout.
 
 ## Attribution
 
-> The original project — "Beyond GEARS", BMI 212, March 2026 — was joint work with **Ally Seba** and
-> **Blake Masters**. This repository is an independent reproduction and readout analysis by Jack
-> Fenn; the code here is new. It depends on GEARS (Roohani, Huang & Leskovec, *Nature Biotechnology*
+> The original project, "Beyond GEARS", BMI 212, March 2026, was joint work with **Ally Seba** and
+> **Blake Masters**. This repository is an independent reproduction and readout analysis by me
+> ; the code here is new. It depends on GEARS (Roohani, Huang & Leskovec, *Nature Biotechnology*
 > 2024) as an installed package rather than a fork, and on the three datasets' original authors for
 > the data.
 
